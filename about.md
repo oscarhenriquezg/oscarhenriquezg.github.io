@@ -13,3 +13,7 @@ A place to include any other types of information that you'd like to include abo
 ### Contact me
 
 [email@domain.com](mailto:email@domain.com)
+
+### Credits and stuffs
+
+Ninja icon made by https://www.flaticon.com/authors/iconnice under Creative Commons BY 3.0
