@@ -4,23 +4,19 @@ title: About
 permalink: /about/
 ---
 
+### Some Information
+
 Hola, mi nombre es **Oscar Henríquez G**. y este es mi blog, un lugar donde dejaré registros de mis intereses referentes a temas de tecnología principalmente, mi idea es hacer el ejercicio de escribir y compartir aprendizajes, curiosidades o algo que me parezca interesante, una suerte de bitácora de temas que considere relevantes, para así [aprehender](http://educacion.laguia2000.com/aprendizaje/diferencia-entre-aprender-y-aprehender) de mejor forma estos.
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
 
 ### Contact me
 
 Si quieres contactarme para darme feedback siéntete libre de escribirme a:
 
 [contacto <span style="color: #999999;"><em>at</em> </span>oscarhenriquezg <span style="color: #999999;"><em>dot</em> </span>net](mailto:%63%6Fnta%63t%6F@os%63a%72h%65%6Eri%71uezg.n%65t)
-[oscar@oscarhenriquezg.net](mailto:oscar@oscarhenriquezg.net)
 
 Si prefieres contactarme de manera segura, esta es mi llave PGP 😉
 
-
-'-----BEGIN PGP PUBLIC KEY BLOCK-----
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
 mQINBFqujw8BEAC+5L1JDlYDrrWIV4CAAz6tCLDXJqr4OBAnVFwsRC2CjWrb2aIE
 byQ6R34dUbGG+NRtVEeQk5y2pgz3OOmpL7Wt5r/8MUv3clsbOByVawHpzBoThvbG
 kJc/yhrWwrXwnBTlAIahFccPivM0vp4H7haRLJvB2HuCi8fChDoDiFiKcdPzYL1R
@@ -70,11 +66,10 @@ tTBQIRpg7sZTxyrE5SZRxi7r43jYuFObPV5C5IGMG/Or2lgVTZDOd4bG0NZAO7oJ
 789vacHn1fWxws7QcivTVNN92HOblIlMacekE30DDirUi8fDQWw+aziwkBE3SmSd
 XEA4uMfrvuLt3XQ1MD//cer5EU5Fix0=
 =i+Im
------END PGP PUBLIC KEY BLOCK-----'
-
+-----END PGP PUBLIC KEY BLOCK-----
 
 ### Credits and stuffs
-Las entradas de mi blog y el material expuesto es de libre uso, copia o adaptación, respetando la autoría y para uso no comercial, bajo una licencia de [Creative Commons Reconocimiento-NoComercial 4.0 Internacional.](http://creativecommons.org/licenses/by-nc/4.0/)
+Las entradas de mi blog y el material expuesto es de libre uso, copia o adaptación, respetando la autoría y para uso no comercial, todo esto bajo una licencia de [Creative Commons Reconocimiento-NoComercial 4.0 Internacional.](http://creativecommons.org/licenses/by-nc/4.0/)
 
 
 Ninja icon made by [iconice](https://www.flaticon.com/authors/iconnice) under Creative Commons BY 3.0
