@@ -9,8 +9,6 @@ permalink: /index.php/2017/10/05/jerarquia-de-los-file-systems-en-unixlinux/
 categories:
   - Linux
 ---
-&nbsp;
-
 Me gusto mucho esta infografía para comprender la jerarquía de los File Systems en Unix/Linux.
 
 La dejaré por aquí:
