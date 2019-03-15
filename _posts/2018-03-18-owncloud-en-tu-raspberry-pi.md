@@ -9,15 +9,7 @@ permalink: /index.php/2018/03/18/owncloud-en-tu-raspberry-pi/
 categories:
   - Tutoriales
 ---
-<div>
-</div>
-
-<div>
   Los siguientes pasos son el registro de mi instalación de ownCloud en mi Raspberry Pi3, espero sirvan como guía a quien se interese en realizar este proyecto:
-</div>
-
-<div>
-</div>
 
   * Instalar Owncloud en la RPI3.
   * Agregar disco externo a la RPI3.
@@ -25,10 +17,7 @@ categories:
   * Configuración de Servicio de DNS dinámico.
   * Instalar cliente en local.
 
-<div>
-</div>
-
-#### <span style="text-decoration: underline;"> Instalar Owncloud en la RPI3:</span>
+#### Instalar Owncloud en la RPI3:
 
 <div>
 </div>
