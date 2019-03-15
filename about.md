@@ -19,8 +19,8 @@ Si quieres contactarme para darme feedback siéntete libre de escribirme a:
 
 Si prefieres contactarme de manera segura, esta es mi llave PGP 😉
 
-<pre class="lang:vim highlight:0 decode:true">
------BEGIN PGP PUBLIC KEY BLOCK-----
+
+'-----BEGIN PGP PUBLIC KEY BLOCK-----
 mQINBFqujw8BEAC+5L1JDlYDrrWIV4CAAz6tCLDXJqr4OBAnVFwsRC2CjWrb2aIE
 byQ6R34dUbGG+NRtVEeQk5y2pgz3OOmpL7Wt5r/8MUv3clsbOByVawHpzBoThvbG
 kJc/yhrWwrXwnBTlAIahFccPivM0vp4H7haRLJvB2HuCi8fChDoDiFiKcdPzYL1R
@@ -70,9 +70,7 @@ tTBQIRpg7sZTxyrE5SZRxi7r43jYuFObPV5C5IGMG/Or2lgVTZDOd4bG0NZAO7oJ
 789vacHn1fWxws7QcivTVNN92HOblIlMacekE30DDirUi8fDQWw+aziwkBE3SmSd
 XEA4uMfrvuLt3XQ1MD//cer5EU5Fix0=
 =i+Im
------END PGP PUBLIC KEY BLOCK-----
-
-</pre>
+-----END PGP PUBLIC KEY BLOCK-----'
 
 
 ### Credits and stuffs
