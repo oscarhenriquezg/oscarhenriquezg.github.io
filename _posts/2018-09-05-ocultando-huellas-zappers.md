@@ -40,7 +40,7 @@ exit</pre>
 Fuente: <http://underc0deblog.blogspot.cl/2014/03/zapper-para-windows-batch.html>
 
 Winzapper:  
-<img class="alignnone  wp-image-322" src="http://163.250.212.113/wp-content/uploads/2018/09/winzap.png" alt="winzap" width="285" height="234" srcset="http://163.250.212.113/wp-content/uploads/2018/09/winzap.png 398w, http://163.250.212.113/wp-content/uploads/2018/09/winzap-300x246.png 300w" sizes="(max-width: 285px) 100vw, 285px" />  
+<img class="alignnone  wp-image-322" src="https://www.oscarhenriquezg.net/images/2018/09/winzap.png" alt="winzap" width="285" height="234" srcset="https://www.oscarhenriquezg.net/images/2018/09/winzap.png 398w, https://www.oscarhenriquezg.net/images/2018/09/winzap-300x246.png 300w" sizes="(max-width: 285px) 100vw, 285px" />  
 Fuente: <http://ntsecurity.nu/toolbox/winzapper/>
 
 **Linux**:

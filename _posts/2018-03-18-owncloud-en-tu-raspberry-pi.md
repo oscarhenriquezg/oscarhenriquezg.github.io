@@ -365,7 +365,7 @@ sudo mkdir /media/HD500/owncloud/data</pre>
 </div>
 
 <div>
-   <img class="alignnone size-medium wp-image-289" src="http://163.250.212.113/wp-content/uploads/2018/03/owncloud01-300x192.png" alt="" width="300" height="192" srcset="http://163.250.212.113/wp-content/uploads/2018/03/owncloud01-300x192.png 300w, http://163.250.212.113/wp-content/uploads/2018/03/owncloud01.png 750w" sizes="(max-width: 300px) 100vw, 300px" />
+   <img class="alignnone size-medium wp-image-289" src="https://www.oscarhenriquezg.net/images/2018/03/owncloud01-300x192.png" alt="" width="300" height="192" srcset="https://www.oscarhenriquezg.net/images/2018/03/owncloud01-300x192.png 300w, https://www.oscarhenriquezg.net/images/2018/03/owncloud01.png 750w" sizes="(max-width: 300px) 100vw, 300px" />
 </div>
 
 <div>
@@ -376,7 +376,7 @@ sudo mkdir /media/HD500/owncloud/data</pre>
 </div>
 
 <div>
-  <img class="alignnone size-medium wp-image-290" src="http://163.250.212.113/wp-content/uploads/2018/03/owncloud02-300x162.png" alt="" width="300" height="162" srcset="http://163.250.212.113/wp-content/uploads/2018/03/owncloud02-300x162.png 300w, http://163.250.212.113/wp-content/uploads/2018/03/owncloud02.png 492w" sizes="(max-width: 300px) 100vw, 300px" />
+  <img class="alignnone size-medium wp-image-290" src="https://www.oscarhenriquezg.net/images/2018/03/owncloud02-300x162.png" alt="" width="300" height="162" srcset="https://www.oscarhenriquezg.net/images/2018/03/owncloud02-300x162.png 300w, https://www.oscarhenriquezg.net/images/2018/03/owncloud02.png 492w" sizes="(max-width: 300px) 100vw, 300px" />
 </div>
 
 <div>

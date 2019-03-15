@@ -21,13 +21,13 @@ Probe con los datos por defecto admin/<blank> y nada, 1234, qwerty, etc. y nada,
   1. Me baje un diccionario básico, el más básico que encontré fue este [500-worst-passwords.txt](https://wiki.skullsecurity.org/images/c/ca/500-worst-passwords.txt)  con solo 4KB, me pareció que era muy pequeño, pero el nombre me gusto, así que no dude en probarlo.
   2. Desenfunde la vieja confiable: [THC HYDRA](http://sectools.org/tool/hydra/)
 
-<img class="wp-image-193 aligncenter" src="http://vps117915.vps.ovh.ca/wp-content/uploads/2017/07/hydra_vieja_confiable-300x225.png" alt="" width="216" height="162" srcset="http://163.250.212.113/wp-content/uploads/2017/07/hydra_vieja_confiable-300x225.png 300w, http://163.250.212.113/wp-content/uploads/2017/07/hydra_vieja_confiable.png 308w" sizes="(max-width: 216px) 100vw, 216px" /> 
+<img class="wp-image-193 aligncenter" src="https://www.oscarhenriquezg.net/images/2017/07/hydra_vieja_confiable-300x225.png" alt="" width="216" height="162" srcset="https://www.oscarhenriquezg.net/images/2017/07/hydra_vieja_confiable-300x225.png 300w, https://www.oscarhenriquezg.net/images/2017/07/hydra_vieja_confiable.png 308w" sizes="(max-width: 216px) 100vw, 216px" /> 
 
 <!--more-->
 
 Como ya hace tiempo no ocupaba esta herramienta me puse a leer el manual y a probar lo que necesitaba, el router entregaba una ventana de autenticación básica vía http del siguiente tipo:
 
-<img class="aligncenter wp-image-202 " src="http://vps117915.vps.ovh.ca/wp-content/uploads/2017/07/http-basic-1024x434.png" alt="" width="523" height="222" srcset="http://163.250.212.113/wp-content/uploads/2017/07/http-basic-1024x434.png 1024w, http://163.250.212.113/wp-content/uploads/2017/07/http-basic-300x127.png 300w, http://163.250.212.113/wp-content/uploads/2017/07/http-basic-768x326.png 768w, http://163.250.212.113/wp-content/uploads/2017/07/http-basic-700x297.png 700w, http://163.250.212.113/wp-content/uploads/2017/07/http-basic.png 1354w" sizes="(max-width: 523px) 100vw, 523px" /> 
+<img class="aligncenter wp-image-202 " src="https://www.oscarhenriquezg.net/images/2017/07/http-basic-1024x434.png" alt="" width="523" height="222" srcset="https://www.oscarhenriquezg.net/images/2017/07/http-basic-1024x434.png 1024w, https://www.oscarhenriquezg.net/images/2017/07/http-basic-300x127.png 300w, https://www.oscarhenriquezg.net/images/2017/07/http-basic-768x326.png 768w, https://www.oscarhenriquezg.net/images/2017/07/http-basic-700x297.png 700w, https://www.oscarhenriquezg.net/images/2017/07/http-basic.png 1354w" sizes="(max-width: 523px) 100vw, 523px" /> 
 
 Hydra es muy versátil en cuanto al tipo de autenticaciones que soporta, según nos indica su documentación:
 
