@@ -14,7 +14,7 @@ Si quieres contactarme para darme feedback siéntete libre de escribirme a:
 
 [contacto <span style="color: #999999;"><em>at</em> </span>oscarhenriquezg <span style="color: #999999;"><em>dot</em> </span>net](mailto:%63%6Fnta%63t%6F@os%63a%72h%65%6Eri%71uezg.n%65t)
 
-Si prefieres contactarme de manera segura, esta es [mi llave PGP](https://www.oscarhenriquezg.net/pgp-key-ohg.key) 😉
+Si prefieres contactarme de manera segura, esta es [mi llave PGP](https://github.com/oscarhenriquezg/oscarhenriquezg.github.io/blob/master/pgp-key-ohg.key) 😉
 
 ### Credits and stuffs
 Las entradas de mi blog y el material aquí expuesto es de libre uso, copia o adaptación, respetando la autoría y para uso no comercial, todo esto bajo una licencia de [Creative Commons Reconocimiento-NoComercial 4.0 Internacional.](http://creativecommons.org/licenses/by-nc/4.0/)
