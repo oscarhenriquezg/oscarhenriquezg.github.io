@@ -101,14 +101,14 @@ Default Index e IPs de cada server:
 
 Ya que el index por defecto de Apache tenía un mayor tamaño en kilobytes que el de Nginx, decidí crear un nuevo index muy sencillo y creativo 😉 , el que monte como index por defecto en ambos servidores, para que exista igualdad de condiciones (esto para que no se sospeche que esta leve diferencia de tamaño puediera dar una ventaja a ngnix ya que sería más liviana la página a servir):
 
-```html
+``html
 <html>
 <header>
 <title>Hola Mundo</title>
 </header>
 <body><br>Hello world :D<br></body>
 </html>
-```
+``
 
 <div id='gallery-4' class='gallery galleryid-52 gallery-columns-1 gallery-size-medium'>
   <figure class='gallery-item'> 
