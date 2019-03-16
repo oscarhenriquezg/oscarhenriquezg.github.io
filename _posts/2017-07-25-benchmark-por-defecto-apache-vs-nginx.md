@@ -154,7 +154,8 @@ Aprovechando las infinitas posibilidades que nos entrega la shell en un servidor
 
 Con un par de modificaciones lo adapto a mi necesidad agregando una columna con la hora, minuto y segundos del momento en que se toma la muestra y cambie el tiempo de espera entre toma de muestras a 1 segundo. Quedando así:
 
-<pre class="lang:sh decode:true ">#! /bin/bash
+```bash
+#! /bin/bash
 printf "Memory\t\tDisk\t\tCPU\t\tTIME\n"
 end=$((SECONDS+3600))
 while [ $SECONDS -lt $end ]; do
@@ -164,7 +165,8 @@ CPU=$(top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')
 HH=$(date +"%T")
 echo "$MEMORY$DISK$CPU$HH"
 sleep 1
-done</pre>
+done
+```
 
 Ya con el script de monitoreo listo, lo pruebo y registra justo lo que necesito. Como quiero ver en línea el registro de las muestras y también registrarlo en un archivo CSV para su posterior análisis lo ejecuto con un [tee](http://linux.101hacks.com/unix/tee-command-examples/) y queda andando mas menos así:
 
@@ -247,4 +249,4 @@ Se podría decir que las diferencias son mínimas, pero tengamos en consideraci�
 
 **NOTA**: _Estas pruebas han sido realizadas entre el 18 y 19 de Marzo de 2017, con las últimas versiones del software de los vendors mencionados anteriormente en la  fecha indicada._
 
-Cualquier [comentario](http://vps117915.vps.ovh.ca/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/#respond) o sugerencia para futuras pruebas es bienvenido 😀
+Cualquier comentario o sugerencia para futuras pruebas es bienvenido 😀
