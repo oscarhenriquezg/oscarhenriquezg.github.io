@@ -73,13 +73,13 @@ Respecto a la instalación de los servidores web lo haremos de la manera más se
 
 Para Apache usaremos:
 
-```#apt-get install apache2```
+`#apt-get install apache2`
 
 Con el comando anterior se nos instala Apache en su versión 2.4.10
 
 Para Nginx usaremos:
 
-```#apt-get install nginx```
+`#apt-get install nginx`
 
 Con el comando anterior se nos instala Nginx en su versión 1.6.2
 
@@ -101,7 +101,14 @@ Default Index e IPs de cada server:
 
 Ya que el index por defecto de Apache tenía un mayor tamaño en kilobytes que el de Nginx, decidí crear un nuevo index muy sencillo y creativo 😉 , el que monte como index por defecto en ambos servidores, para que exista igualdad de condiciones (esto para que no se sospeche que esta leve diferencia de tamaño puediera dar una ventaja a ngnix ya que sería más liviana la página a servir):
 
-```&lt;html&gt;&lt;br&gt;&lt;header&gt;&lt;title&gt;Hola Mundo&lt;/title&gt;&lt;/header&gt;&lt;br&gt;&lt;body&gt;&lt;br&gt;Hello world :D&lt;br&gt;&lt;/body&gt;&lt;br&gt;&lt;/html&gt;```
+```html
+<html>
+<header>
+<title>Hola Mundo</title>
+</header>
+<body><br>Hello world :D<br></body>
+</html>
+```
 
 <div id='gallery-4' class='gallery galleryid-52 gallery-columns-1 gallery-size-medium'>
   <figure class='gallery-item'> 
