@@ -20,3 +20,5 @@ Si prefieres contactarme de manera segura, esta es [mi llave PGP](https://github
 Las entradas de mi blog y el material aquí expuesto es de libre uso, copia o adaptación, respetando la autoría y para uso no comercial, todo esto bajo una licencia de [Creative Commons Reconocimiento-NoComercial 4.0 Internacional.](http://creativecommons.org/licenses/by-nc/4.0/)
 
 Ninja icon made by [iconice](https://www.flaticon.com/authors/iconnice) under Creative Commons BY 3.0
+
+This site is proudly powered by [Jekyll](https://jekyllrb.com/) Transform your plain text into static websites and blogs.
