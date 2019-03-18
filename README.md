@@ -1,4 +1,4 @@
-# Infor about source code of www.oscarhenriqeuzg.net
+# Info
 
 This repo is the source code of https://www.oscarhenriquezg.net/ my personal site/blog.
 This site is completly based in Jekyll and quickly deployed with JekyllNow:
@@ -7,7 +7,7 @@ This site is completly based in Jekyll and quickly deployed with JekyllNow:
 
 *Jekyll Now* makes it easier to create your Jekyll blog, by eliminating a lot of the up front setup.([Jekyll Now](https://www.jekyllnow.com))
 
-# Look!
+# Look
 
 Look the results of this code in: [**https://www.oscarhenriquezg.net**](https://www.oscarhenriquezg.net/) 
 
@@ -19,4 +19,4 @@ Look the results of this code in: [**https://www.oscarhenriquezg.net**](https://
 
 ## Feedback
 
-if you want to give some feedback, contact me [here.](https://www.oscarhenriquezg.net/about).
+if you want to give some feedback, contact me [here.](https://www.oscarhenriquezg.net/about)
