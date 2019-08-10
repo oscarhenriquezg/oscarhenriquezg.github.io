@@ -9,7 +9,9 @@ permalink: /index.php/2018/03/18/owncloud-en-tu-raspberry-pi/
 categories:
   - Tutoriales
 ---
-  Los siguientes pasos son el registro de mi instalación de ownCloud en mi Raspberry Pi3, espero sirvan como guía a quien se interese en realizar este proyecto:
+  
+  
+Los siguientes pasos son el registro de mi instalación de ownCloud en mi Raspberry Pi3, espero sirvan como guía a quien se interese en realizar este proyecto:
 
   * Instalar Owncloud en la RPI3.
   * Agregar disco externo a la RPI3.
@@ -19,365 +21,178 @@ categories:
 
 #### Instalar Owncloud en la RPI3:
 
-<div>
-</div>
 
-<div>
-  Primero actualizamos la RPI3:
-</div>
+Primero actualizamos nuestro raspbian en la RPI3:
 
-<div>
-  <pre class="lang:default decode:true">sudo apt-get update</pre>
-</div>
 
-<div>
-  Descargamos los paquetes necesarios:
-</div>
+    sudo apt-get update -y
 
-<div>
-  <pre class="lang:default decode:true">sudo apt-get install apache2 php5 php5-json php-xml-parser php5-gd php5-sqlite curl libcurl3 libcurl3-dev php5-curl php5-common
-</pre>
-</div>
+Luego instalamos los paquetes necesarios
 
-<div>
-  Descargar OwnCloud, en su última versión (la versión puede variar de acuerdo a nuevas actualizaciones, verificar en <a href="https://owncloud.org/community/">https://owncloud.org/community/</a>):
-</div>
+    sudo apt-get install apache2 php5 php5-json php-xml-parser php5-gd php5-sqlite curl libcurl3 libcurl3-dev php5-curl php5-common
 
-<div>
-  <pre class="lang:default decode:true">wget https://download.owncloud.org/community/owncloud-9.1.3.tar.bz2
-</pre>
-</div>
 
-<div>
-  Descomprimir el archivo descargado:
-</div>
+  Descargamo OwnCloud, en su última versión (la versión puede variar de acuerdo a nuevas actualizaciones, verificar en [https://owncloud.org/community/](https://owncloud.org/community) y descomprimimos el archivo descargado:
 
-<div>
-  <pre class="lang:default decode:true">tar -xjf owncloud-9.1.3.tar.bz2
-</pre>
-</div>
 
-<div>
-  Copiar la carpeta descomprimida en el directorio:
-</div>
+    wget https://download.owncloud.org/community/owncloud-9.1.3.tar.bz2
+    tar -xjf owncloud-9.1.3.tar.bz2
 
-<div>
-  <pre class="lang:default decode:true">sudo cp -r owncloud /var/www/html
-</pre>
-</div>
 
-<div>
-  Hacer al usuario www-data el dueño de todos los archivos:
-</div>
+  Copiamos la carpeta descomprimida en el directorio web y Hacemos al usuario www-data el dueño de todos los archivos::
 
-<div>
-  <pre class="lang:default decode:true">sudo chown -R www-data:www-data /var/www/html
-</pre>
-</div>
+    sudo cp -r owncloud /var/www/html
+    sudo chown -R www-data:www-data /var/www/html
 
-#### 
 
-#### <span style="text-decoration: underline;">Agregar disco externo a la RPI3:</span>
 
-<div>
-  Crear directorio donde montaremos nuestro disco en /media
-</div>
+#### Agregar disco externo a la RPI3:
 
-<div>
-  <pre class="lang:default decode:true">sudo mkdir /media/HD500
-</pre>
-</div>
 
-<div>
-  Como identificar nuestro disco
-</div>
+Ahora debemos crear directorio donde montaremos nuestro disco en /media
 
-<div>
-</div>
+    sudo mkdir /media/HD500
 
-<div>
-  Ejecutar:
-</div>
+Como identificar nuestro disco
 
-<div>
-  <pre class="lang:default decode:true">sudo fdisk -l
-</pre>
-</div>
+ Ejecutar:
+ 
+    sudo fdisk -l
+Obtenemos una salida similar a esta:
 
-<div>
-  <pre class="lang:default decode:true">Device      Start       End   Sectors   Size Type
-/dev/sda1      40    409639    409600   200M EFI System</pre>
-</div>
+    Device      Start       End   Sectors   Size Type
+    /dev/sda1      40    409639    409600   200M EFI System
 
-<div>
+
   Copiar salida anterior.
-</div>
 
-<div>
-</div>
-
-<div>
   En este momento conectamos nuestro disco externo y ejecutamos nuevamente:
-</div>
 
-<div>
-  <pre class="lang:default decode:true">sudo fdisk -l</pre>
-</div>
 
-<div>
-  Comparamos con la salida anterior, donde se identifica claramente la linea que identifica nuestro disco externo:
-</div>
+    sudo fdisk -l</pre>
 
-<div>
-  <pre class="lang:default decode:true">Device      Start       End   Sectors   Size Type
-/dev/sda1      40    409639    409600   200M EFI System
-/dev/sda2  411648 976445399 976033752 465.4G Linux filesystem</pre>
-</div>
 
-<div>
-  Montar disco duro externo de manera permanente:
-</div>
+  Comparamos con la salida anterior, donde se identifica claramente la linea que identifica nuestro disco externo (/dev/sda2):
 
-<div>
-  <pre class="lang:default decode:true">sudo nano /etc/fstab
-</pre>
-</div>
+    Device      Start       End   Sectors   Size Type
+    /dev/sda1      40    409639    409600   200M EFI System
+    /dev/sda2  411648 976445399 976033752 465.4G Linux filesystem
 
-<div>
+
+
+  Montar disco duro externo de manera permanente editando el archivo fstab:
+
+    sudo vi /etc/fstab
+
+
   Agregamos linea (respetar espacios):
-</div>
 
-<div>
-  <pre class="lang:default decode:true">/dev/sda2 /media/HD500 ext4 defaults  0 0</pre>
-</div>
+    /dev/sda2 /media/HD500 ext4 defaults  0 0
 
-<div>
   Donde:
-</div>
 
-<div>
-</div>
+  **/dev/sda2**: es la identificación de nuestro disco en el sistema
 
-<div>
-  /dev/sda2: es la identificación de nuestro disco en el sistema
-</div>
 
-<div>
-  /media/HD500: es la carpeta que creamos para montar nuestro hd externo
-</div>
+  **/media/HD500**: es la carpeta que creamos para montar nuestro hd externo
 
-<div>
-  ext4: es el formato del disco
-</div>
+  **ext4: es el formato del disco
 
-<div>
-  defaults: configs por default
-</div>
+ ** defaults**: configs por default
 
-<div>
-</div>
 
-<div>
   Verificamos que la edición de nuestro archivo quedo correcta:
-</div>
 
-<div>
-  <pre class="lang:default decode:true">less /etc/stab</pre>
-</div>
 
-<div>
-  Una vez seguros de que estamos OK, damos la orden de montar todos los discos al sistema:
-</div>
+    less /etc/fstab
 
-<div>
-  <pre class="lang:default decode:true">sudo mount -a</pre>
-</div>
+Una vez seguros de que estamos OK, damos la orden de montar todos los discos al sistema:
 
-<div>
+    sudo mount -a
+
+
   Creamos la carpeta para nuestros archivos en ownCloud:
-</div>
 
-<div>
-  <pre class="lang:default decode:true">sudo mkdir /media/HD500/owncloud
-sudo mkdir /media/HD500/owncloud/data</pre>
-</div>
 
-<div>
-  <h4>
-  </h4>
-  
-  <h4>
-    <span style="text-decoration: underline;">Configuraciones de webserver:</span>
-  </h4>
-</div>
+    sudo mkdir /media/HD500/owncloud
+    sudo mkdir /media/HD500/owncloud/data</pre>
 
-<div>
+
+#### Configuraciones de webserver:</span>
+
   Hacemos al usuario www-data el dueño del disco montado:
-</div>
 
-<div>
-  <pre class="lang:default decode:true">sudo chown -R www-data:www-data /media/HD500</pre>
-</div>
+    sudo chown -R www-data:www-data /media/HD500</pre>
 
-<div>
+
   Cambiamos el tamaño máximo de subida de archivos a 1024 mb:
-</div>
+  
+    sudo nano /etc/php5/apache2/php.ini
 
-<div>
-  <pre class="lang:default decode:true">sudo nano /etc/php5/apache2/php.ini</pre>
-</div>
 
-<div>
   Reiniciamos el servicio apache:
-</div>
 
-<div>
-  <pre class="lang:default decode:true">sudo service apache2 restart</pre>
+    sudo service apache2 restart</pre>
   
-  <h4>
-  </h4>
-  
-  <h4>
-    <span style="text-decoration: underline;">Configuración de Servicio de DNS dinámico:</span>
-  </h4>
-</div>
+#### Configuración de Servicio de DNS dinámico:
 
-<div>
-  Este paso es opcional, pero recomendado, aquí configuraremos un servicio de DNS dinámico para que nuestro servidor de OwnCloud sea accesible desde internet y podamos vey y sincronizar nuestros archivos desde cualquier parte.
-</div>
+  Este paso es opcional, pero recomendado, aquí configuraremos un servicio de DNS dinámico para que nuestro servidor de OwnCloud sea accesible desde internet y podamos ver y sincronizar nuestros archivos desde cualquier parte.
 
-<div>
-</div>
 
-<div>
   Se recomienda registrarse en un servicio de DNS dinámico del tipo <a href="https://www.noip.com">No-IP</a>, <a href="https://www.dlinkddns.com">dlinkddns</a>, etc. yo usare el de dlink ya que uno de mis dispositivos de red tiene la opción de conectarse de manera nativa a este servicio y reportar mi ip dinámica constantemente.
-</div>
 
-<div>
-</div>
 
-<div>
   Agregamos  nuestro nombre de servicio de DNS al archivo hosts de nuestro sistema:
-</div>
 
-<div>
-  <pre class="lang:default decode:true">vi /etc/hosts</pre>
-</div>
+    vi /etc/hosts
 
-<div>
+
   Agrego las siguientes lineas:
-</div>
-
-<div>
-  <pre class="lang:default decode:true">#owncloud en local
-192.168.1.114 tunombredeusuario.dlinkddns.com</pre>
-</div>
-
-<div>
+  
+    #owncloud en local
+    192.168.1.114 tunombredeusuario.dlinkddns.com</pre>
+ 
+ 
   Esto lo hago para que la primera sincronización se realice en el ambito local de mi red y no vaya a resolver el nombre al dns y no pasen los archivos por fuera (por internet)
-</div>
 
-<div>
-</div>
 
-<div>
   una vez realizado esto ingresamos a la url:
-</div>
 
-<div>
-</div>
 
-<div>
   http://tunombredeusuario.dlinkddns.com
-</div>
 
-<div>
-</div>
 
-<div>
+
+
   Donde nos aparece la primera interfaz de owncloud y nos pide crear un user y password de adminisrador:
-</div>
 
-<div>
-</div>
 
-<div>
-  Es altamente recomendable no usar nombres por defecto como &#8220;admin&#8221;, root, administrator, administrador, etc.
-</div>
+  Es altamente recomendable no usar nombres por defecto como &#8220;admin&#8221;, root, administrator, administrador, etc. esto para evitar posibles ataques de fuerza bruta contra el user
 
-<div>
-  esto para evitar posibles ataques de fuerza bruta contra el user
-</div>
 
-<div>
-</div>
-
-<div>
   Seleccionar en la interfaz la opción de almacenamiento y base de datos y en el textbox que se nos despliega debemos ingresar la ruta que creamos para nuestros archivos en nuestro disco externo:
-</div>
+ 
+      /media/HD500/owncloud/data
 
-<div>
-</div>
-
-<div>
-   /media/HD500/owncloud/data
-</div>
-
-<div>
-</div>
-
-<div>
   Luego presionamos instalar.
-</div>
 
-<div>
-</div>
 
-#### <span style="text-decoration: underline;">Instalar cliente en local:</span>
 
-<div>
+#### Instalar cliente en local:
+
   Descargamos el cliente local segun nuestro SO:
-</div>
 
-<div>
-</div>
+[https://owncloud.org/download/#owncloud-desktop-client](https://owncloud.org/download/#owncloud-desktop-client)
 
-<div>
-  <a href="https://owncloud.org/download/#owncloud-desktop-client">https://owncloud.org/download/#owncloud-desktop-client</a>
-</div>
+Configuramos nuestra URL de OwnCloud:
 
-<div>
-</div>
+![](https://www.oscarhenriquezg.net/images/2018/03/owncloud01-300x192.png)
 
-<div>
-  Configuramos nuestra URL de OwnCloud:
-</div>
-
-<div>
-   <img class="alignnone size-medium wp-image-289" src="https://www.oscarhenriquezg.net/images/2018/03/owncloud01-300x192.png" alt="" width="300" height="192" srcset="https://www.oscarhenriquezg.net/images/2018/03/owncloud01-300x192.png 300w, https://www.oscarhenriquezg.net/images/2018/03/owncloud01.png 750w" sizes="(max-width: 300px) 100vw, 300px" />
-</div>
-
-<div>
-</div>
-
-<div>
   Nuestro user y password:
-</div>
 
-<div>
-  <img class="alignnone size-medium wp-image-290" src="https://www.oscarhenriquezg.net/images/2018/03/owncloud02-300x162.png" alt="" width="300" height="162" srcset="https://www.oscarhenriquezg.net/images/2018/03/owncloud02-300x162.png 300w, https://www.oscarhenriquezg.net/images/2018/03/owncloud02.png 492w" sizes="(max-width: 300px) 100vw, 300px" />
-</div>
+![](https://www.oscarhenriquezg.net/images/2018/03/owncloud02-300x162.png)
 
-<div>
-</div>
 
-<div>
   Y terminamos la instalación, ya estamos listos para sincronizar nuestros archivos.
-</div>
 
-<div>
-</div>
-
-<div>
-  Como siempre, cualquier duda o comentario es bienvenido 😊
-</div>
+Como siempre, cualquier duda o comentario es bienvenido 😊
