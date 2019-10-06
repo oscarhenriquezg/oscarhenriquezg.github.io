@@ -36,8 +36,8 @@ En cuanto a hardware vamos a utilizar VPS del proveedor Digital Ocean, ya que so
 #### Nombres de servidores:
 
 **Server1:** debian-512mb-ny-01-**apache**   
-**IP:** 67.205.147.162
-**Ubicación:** New York City, site 1, DigitalOcean
+**IP:** 67.205.147.162  
+**Ubicación:** New York City, site 1, DigitalOcean  
 
 **Server2:** debian-512mb-ny-01-**nginx**  
 **IP:** 198.211.116.62  
@@ -151,7 +151,7 @@ Ya con el script de monitoreo listo, lo pruebo y registra justo lo que necesito.
 
 ![alt text](https://www.oscarhenriquezg.net/images/2017/03/shell-monitoreo-300x202.png "Monitor shell")
 
-[[See]](www.oscarhenriquezg.net/images/2017/03/shell-monitoreo.png)
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/shell-monitoreo.png)
 
 ### Pruebas en curso
 
