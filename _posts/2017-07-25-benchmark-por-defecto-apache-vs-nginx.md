@@ -44,7 +44,7 @@ En cuanto a hardware vamos a utilizar VPS del proveedor Digital Ocean, ya que so
 **Ubicación:** New York City, site 1, DigitalOcean  
 
 ![alt text](https://www.oscarhenriquezg.net/images/2017/03/DO-Droplets-300x170.png "Droplets")   
-[[See]](www.oscarhenriquezg.net/images/2017/03/DO-Droplets-768x436.png)
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/DO-Droplets-768x436.png)
 
 
 #### Sistema Operativo
@@ -81,19 +81,17 @@ Completadas las instalaciones por defecto iremos a probar que el servicio se est
 
 Default Index e IPs de cada server:
 
-<div id='gallery-3' class='gallery galleryid-52 gallery-columns-2 gallery-size-medium'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/default-index-apache/'><img width="300" height="172" src="https://www.oscarhenriquezg.net/images/2017/03/default-index-apache-300x172.png" class="attachment-medium size-medium" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/default-index-apache-300x172.png 300w, https://www.oscarhenriquezg.net/images/2017/03/default-index-apache-768x441.png 768w, https://www.oscarhenriquezg.net/images/2017/03/default-index-apache-1024x588.png 1024w, https://www.oscarhenriquezg.net/images/2017/03/default-index-apache-700x402.png 700w, https://www.oscarhenriquezg.net/images/2017/03/default-index-apache.png 1051w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/default-index-nginx/'><img width="300" height="172" src="https://www.oscarhenriquezg.net/images/2017/03/default-index-nginx-300x172.png" class="attachment-medium size-medium" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/default-index-nginx-300x172.png 300w, https://www.oscarhenriquezg.net/images/2017/03/default-index-nginx-768x441.png 768w, https://www.oscarhenriquezg.net/images/2017/03/default-index-nginx-1024x588.png 1024w, https://www.oscarhenriquezg.net/images/2017/03/default-index-nginx-700x402.png 700w, https://www.oscarhenriquezg.net/images/2017/03/default-index-nginx.png 1051w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  </div></figure>
-</div>
 
-Ya que el index por defecto de Apache tenía un mayor tamaño en kilobytes que el de Nginx, decidí crear un nuevo index muy sencillo y creativo 😉 , el que monte como index por defecto en ambos servidores, para que exista igualdad de condiciones (esto para que no se sospeche que esta leve diferencia de tamaño puediera dar una ventaja a ngnix ya que sería más liviana la página a servir):
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/default-index-apache-300x172.png "index apache")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/default-index-apache-1024x588.png)
+
+
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/default-index-nginx-300x172.png "index nginx")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/default-index-nginx-1024x588.png)
+
+
+
+Ya que el index por defecto de Apache tenía un mayor tamaño en kilobytes que el de Nginx, decidí crear un nuevo index muy sencillo y creativo 😉, el que monte como index por defecto en ambos servidores, para que exista igualdad de condiciones (esto para que no se sospeche que esta leve diferencia de tamaño puediera dar una ventaja a ngnix ya que sería más liviana la página a servir):
 
 ```html
 <html>
@@ -101,13 +99,10 @@ Ya que el index por defecto de Apache tenía un mayor tamaño en kilobytes que e
 <body><br>Hello world :D<br></body>
 </html>
 ```
-<div id='gallery-4' class='gallery galleryid-52 gallery-columns-1 gallery-size-medium'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/index-hellow-world/'><img width="300" height="153" src="https://www.oscarhenriquezg.net/images/2017/03/index-hellow-world-300x153.png" class="attachment-medium size-medium" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/index-hellow-world-300x153.png 300w, https://www.oscarhenriquezg.net/images/2017/03/index-hellow-world-768x393.png 768w, https://www.oscarhenriquezg.net/images/2017/03/index-hellow-world-1024x524.png 1024w, https://www.oscarhenriquezg.net/images/2017/03/index-hellow-world-700x358.png 700w, https://www.oscarhenriquezg.net/images/2017/03/index-hellow-world.png 1107w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  </div></figure>
-</div>
+
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/index-hellow-world-300x153.png "index nuevo hola mundo")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/index-hellow-world-1024x524.png)
+
 
 Listo, hasta aquí ya tenemos preparado el ambiente para realizar la prueba, pero me falta la herramienta a utilizar para probar el ambiente preparado, cuando ya estaba desenfundando el clásico JMeter, me tropecé con [OctoPerf](https://octoperf.com/) leyendo [uno de mis blogs favoritos](https://www.genbetadev.com/herramientas/12-herramientas-imprescindibles-para-asegurar-la-calidad-del-software-y-sus-alternativas) y me pareció la ocasión perfecta para probarlo.
 
@@ -118,33 +113,23 @@ Listo, hasta aquí ya tenemos preparado el ambiente para realizar la prueba, per
 Entonces ahora nos ponemos en la labor de armar el set de pruebas, sus características y el tipo de reportería que queremos obtener, la verdad que fue un proceso muy, muy facil y rapido en solo 6 pasos:
 
   1. Creamos un nuevo proyecto
-  2. Seleccionamos &#8220;Website/URL&#8221; para indicar que estresamos una dirección web (también nos permite importar configuraciones de proyectos de Jmeter 😀 )
+  2. Seleccionamos "Website/URL" para indicar que estresaremos una dirección web (también nos permite importar configuraciones de proyectos de Jmeter 😀 )
   3. Definimos la URL a estresar y el método http a usar, en este caso un simple [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
   4. Acá se nos permite configurar algunos parámetros de nuestro escenario de pruebas, aquí fue donde me llevo una grata sorpresa y quiero hacer un pequeño paréntesis:  
-    _El servicio de OctoPerf nos permite seleccionar desde donde le vamos a &#8220;pegar&#8221;a nuestra URL  y como opciones nos da los servicios de Digital Ocean y sus distintos Datacenters, como también los de Amazon y sus respectivos Datacenters. Ya que mis servidores a estresar están en Digital Ocean en uno de sus datacenters de nueva york, selecciono entonces el mismo proveedor y la misma ubicación, de esta forma aseguramos encontrarnos dentro de la misma red y quizás hasta dentro del mismo datacenter, lo que nos ayuda en tener mejores tiempos de respuesta entre servidores._
-  5. En el quinto paso definimos el número de VUs (Virtual Users) en mi caso 50 y luego le damos a &#8220;Launch 50VUs&#8221;. En este caso la prueba se realizará durante 10 minutos, ascendiendo desde 1 VU en el minuto cero, llegando a los 50 VUs en el minuto 5 y manteniéndose así hasta los 10 minutos, como se aprecia en la siguiente gráfica.
+    _El servicio de OctoPerf nos permite seleccionar desde donde le vamos a "pegar" a nuestra URL  y como opciones nos da los servicios de Digital Ocean y sus distintos Datacenters, como también los de Amazon y sus respectivos Datacenters. Ya que mis servidores a estresar están en Digital Ocean en uno de sus datacenters de nueva york, selecciono entonces el mismo proveedor y la misma ubicación, de esta forma aseguramos encontrarnos dentro de la misma red y quizás hasta dentro del mismo datacenter, lo que nos ayuda en tener mejores tiempos de respuesta entre servidores._
+  5. En el quinto paso definimos el número de VUs (Virtual Users) en mi caso 50 y luego le damos a &"Launch 50VUs". En este caso la prueba se realizará durante 10 minutos, ascendiendo desde 1 VU en el minuto cero, llegando a los 50 VUs en el minuto 5 y manteniéndose así hasta los 10 minutos, como se aprecia en la siguiente gráfica.
 
-<div id='gallery-5' class='gallery galleryid-52 gallery-columns-1 gallery-size-large'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/50-vus/'><img width="720" height="221" src="https://www.oscarhenriquezg.net/images/2017/03/50-vus-e1501035899332-1024x314.png" class="attachment-large size-large" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/50-vus-e1501035899332-1024x314.png 1024w, https://www.oscarhenriquezg.net/images/2017/03/50-vus-e1501035899332-300x92.png 300w, https://www.oscarhenriquezg.net/images/2017/03/50-vus-e1501035899332-768x235.png 768w, https://www.oscarhenriquezg.net/images/2017/03/50-vus-e1501035899332-700x215.png 700w, https://www.oscarhenriquezg.net/images/2017/03/50-vus-e1501035899332.png 1142w" sizes="(max-width: 720px) 100vw, 720px" /></a>
-  </div></figure>
-</div>
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/50-vus-e1501035899332-768x235.png "VUs vs Time")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/50-vus-e1501035899332-1024x314.png)
 
-Ya con ganas de darle &#8220;play&#8221;e iniciar la prueba recuerdo el monitoreo en la capa de SO (Sistema Operativo), al momento de idear esta prueba siempre quise considerar también el consumo de recursos a nivel de SO, algo sencillo, pero que mida online lo básico (CPU, MEM, HD).
+
+Ya con ganas de darle "play" e iniciar la prueba recuerdo el monitoreo en la capa de SO (Sistema Operativo), al momento de idear esta prueba siempre quise considerar también el consumo de recursos a nivel de SO, algo sencillo, pero que mida online lo básico (CPU, MEM, HD).
 
 #### Preparación de monitoreo en Linux
 
 Aprovechando las infinitas posibilidades que nos entrega la shell en un servidor linux, lo primero que se me ocurre para realizar un monitoreo efectivo y sencillo es generar un script que me tome los parámetros de CPU, memoria y disco y los guarde para su posterior análisis. Para no reinventar la rueda y googleando un poco llego justo a lo que necesito en el siguiente post de systeen.com:
 
-<blockquote class="wp-embedded-content" data-secret="LX7QcuS6Fk">
-  <p>
-    <a href="http://www.systeen.com/2016/05/07/bash-script-monitor-cpu-memory-disk-usage-linux/">Bash Script to Monitor CPU, Memory and Disk Usage on Linux</a>
-  </p>
-</blockquote>
-
-
+[[Bash Script to Monitor CPU, Memory and Disk Usage on Linux]](http://www.systeen.com/2016/05/07/bash-script-monitor-cpu-memory-disk-usage-linux/)
 
 Con un par de modificaciones lo adapto a mi necesidad agregando una columna con la hora, minuto y segundos del momento en que se toma la muestra y cambie el tiempo de espera entre toma de muestras a 1 segundo. Quedando así:
 
@@ -164,40 +149,32 @@ done
 
 Ya con el script de monitoreo listo, lo pruebo y registra justo lo que necesito. Como quiero ver en línea el registro de las muestras y también registrarlo en un archivo CSV para su posterior análisis lo ejecuto con un [tee](http://linux.101hacks.com/unix/tee-command-examples/) y queda andando mas menos así:
 
-<div id='gallery-6' class='gallery galleryid-52 gallery-columns-1 gallery-size-medium'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/shell-monitoreo/'><img width="300" height="202" src="https://www.oscarhenriquezg.net/images/2017/03/shell-monitoreo-300x202.png" class="attachment-medium size-medium" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/shell-monitoreo-300x202.png 300w, https://www.oscarhenriquezg.net/images/2017/03/shell-monitoreo.png 349w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  </div></figure>
-</div>
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/shell-monitoreo-300x202.png "Monitor shell")
+
+[[See]](www.oscarhenriquezg.net/images/2017/03/shell-monitoreo.png)
 
 ### Pruebas en curso
 
 Ya por fin iniciamos las pruebas y vemos cómo se van comportando online los servidores ante la carga (ojo en los títulos de cada ventana, en la primera imagen me quedaron cruzadas las ventanas :-P):
 
-<div id='gallery-7' class='gallery galleryid-52 gallery-columns-1 gallery-size-large'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/running-tests-00/'><img width="720" height="450" src="https://www.oscarhenriquezg.net/images/2017/03/running-tests-00-1024x640.png" class="attachment-large size-large" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/running-tests-00-1024x640.png 1024w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-00-300x188.png 300w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-00-768x480.png 768w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-00-700x438.png 700w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-00.png 1440w" sizes="(max-width: 720px) 100vw, 720px" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/running-tests-01/'><img width="720" height="450" src="https://www.oscarhenriquezg.net/images/2017/03/running-tests-01-1024x640.png" class="attachment-large size-large" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/running-tests-01-1024x640.png 1024w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-01-300x188.png 300w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-01-768x480.png 768w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-01-700x438.png 700w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-01.png 1440w" sizes="(max-width: 720px) 100vw, 720px" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/running-tests-02/'><img width="720" height="450" src="https://www.oscarhenriquezg.net/images/2017/03/running-tests-02-1024x640.png" class="attachment-large size-large" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/running-tests-02-1024x640.png 1024w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-02-300x188.png 300w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-02-768x480.png 768w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-02-700x438.png 700w, https://www.oscarhenriquezg.net/images/2017/03/running-tests-02.png 1440w" sizes="(max-width: 720px) 100vw, 720px" /></a>
-  </div></figure>
-</div>
+
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/running-tests-00-768x480.png "runnung test")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/running-tests-00-1024x640.png)
+
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/running-tests-01-768x480.png "VUs al alza")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/running-tests-01-1024x640.png)
+
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/running-tests-02-768x480.png "Summary")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/running-tests-02-1024x640.png)
+
 
 ### Resultados
 
 OctoPerf nos da un detallado informe de lo obtenido que podemos visualizar online y descargar como PDF también, aquí dejo los resultados, para que revisen todos los detalles:
 
-[OctoPerf-test-nginx  
-](https://www.oscarhenriquezg.net/images/2017/03/OctoPerf-test-nginx.pdf) [OctoPerf-test-apache](https://www.oscarhenriquezg.net/images/2017/03/OctoPerf-test-apache.pdf)
+[[PDF Report OctoPerf-test-nginx]](https://www.oscarhenriquezg.net/images/2017/03/OctoPerf-test-nginx.pdf)
+
+[[PDF Report OctoPerf-test-apache]](https://www.oscarhenriquezg.net/images/2017/03/OctoPerf-test-apache.pdf)
 
 La comparación de consumo de recursos de Hardware se las debo, quedó en un excel perdido donde grafique los resultados y eran casi iguales, con un leve menor consumo para el servidor con Nginx.
 
@@ -205,33 +182,23 @@ La comparación de consumo de recursos de Hardware se las debo, quedó en un exc
 
 **Resumen de Estadísticas y gráfico de Apache:**
 
-<div id='gallery-8' class='gallery galleryid-52 gallery-columns-2 gallery-size-full'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/statistics-summary-apache/'><img width="729" height="576" src="https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-apache.png" class="attachment-full size-full" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-apache.png 729w, https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-apache-300x237.png 300w, https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-apache-700x553.png 700w" sizes="(max-width: 729px) 100vw, 729px" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/graphic-summary-apache/'><img width="723" height="533" src="https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-apache.png" class="attachment-full size-full" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-apache.png 723w, https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-apache-300x221.png 300w, https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-apache-700x516.png 700w" sizes="(max-width: 723px) 100vw, 723px" /></a>
-  </div></figure>
-</div>
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-apache-700x553.png "Statistics and summary apache")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-apache.png)
 
-Apache responde todas sus solicitudes sin errores en un tiempo promedio de respuesta de 7 milisegundos.
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-apache-700x516.png "Statistics and summary apache")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-apache.png)
+
+
+Apache responde todas sus solicitudes sin errores en un tiempo promedio de 7 milisegundos.
 
 **Resumen de Estadísticas y gráfico de Nginx:**
 
-<div id='gallery-9' class='gallery galleryid-52 gallery-columns-2 gallery-size-full'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/statistics-summary-nginx/'><img width="724" height="539" src="https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-nginx.png" class="attachment-full size-full" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-nginx.png 724w, https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-nginx-300x223.png 300w, https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-nginx-700x521.png 700w" sizes="(max-width: 724px) 100vw, 724px" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/graphic-summary-nginx/'><img width="724" height="538" src="https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-nginx.png" class="attachment-full size-full" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-nginx.png 724w, https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-nginx-300x223.png 300w, https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-nginx-700x520.png 700w" sizes="(max-width: 724px) 100vw, 724px" /></a>
-  </div></figure>
-</div>
+
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-nginx-700x521.png "Statistics and summary nginx")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/statistics-summary-nginx.png)
+
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-nginx-700x520.png "Statistics and summary nginx")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/graphic-summary-nginx.png)
 
 Nginx pudo recibir más "golpes" y responderlos todos sin errores y en un menor tiempo de respuesta promedio.
 
@@ -241,6 +208,6 @@ Nginx pudo recibir más "golpes" y responderlos todos sin errores y en un menor 
 
 Se podría decir que las diferencias son mínimas, pero tengamos en consideración que esta prueba ha sido realizada solo con 50 usuarios, en un ambiente de igualdad de condiciones para ambos servidores, estas pequeñas diferencias se acentúan muchísimo en ambientes productivos donde se está respondiendo a miles de peticiones y cada milisegundo vale ORO (_he visto servicios venirse abajo por demorar milisegundos demás en una operación_).
 
-**NOTA**: _Estas pruebas han sido realizadas entre el 18 y 19 de Marzo de 2017, con las últimas versiones del software de los vendors mencionados anteriormente en la  fecha indicada._
+**NOTA**: _Estas pruebas han sido realizadas entre el 18 y 19 de Marzo de 2017, con las últimas versiones del software de los vendors mencionados._
 
 Cualquier comentario o sugerencia para futuras pruebas es bienvenido 😀
