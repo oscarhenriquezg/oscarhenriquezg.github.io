@@ -4,8 +4,6 @@ title: 'Benchmark por defecto: Apache vs Nginx'
 date: 2017-07-25T23:33:18+00:00
 author: Oscar
 layout: post
-guid: http://144.217.6.251/?p=52
-permalink: /index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/
 swp_pinterest_image_url:
   - ""
 swp_cache_timestamp:
@@ -13,11 +11,11 @@ swp_cache_timestamp:
 categories:
   - Benchmark
 ---
-Este es el primer post de lo que espero sea una serie, donde realizare algunos benchmark a productos o tecnologías &#8220;recién sacadas de la caja&#8221;, la idea es analizarlos en su instalación por defecto, sin ningún tipo de tunning de performance, seguridad, etc.
+Este es el primer post de lo que espero sea una serie, donde realizare algunos benchmark a productos o tecnologías "recién sacadas de la caja", la idea es analizarlos en su instalación por defecto, sin ningún tipo de tunning de performance, seguridad, etc.
 
 Una vez dicho lo anterior, la pregunta a resolver el día de hoy es:
 
-> **Con sus configuraciones por defecto, ¿Cuál servidor web tendrá mejor rendimiento Apache o Nginx?**
+**Con sus configuraciones por defecto, ¿Cuál servidor web tendrá mejor rendimiento Apache o Nginx?**
 
 <img class="wp-image-219 size-thumbnail aligncenter" src="https://www.oscarhenriquezg.net/images/2017/07/apache_vs_nginx-150x150.png" width="150" height="150" /> 
 
