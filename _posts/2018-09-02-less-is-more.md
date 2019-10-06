@@ -4,8 +4,7 @@ title: Less is More
 date: 2018-09-02T17:20:47+00:00
 author: Oscar
 layout: post
-guid: http://144.217.6.251/?p=136
-permalink: /index.php/2018/09/02/less-is-more/
+
 switch_like_status:
   - "1"
 swp_cache_timestamp:

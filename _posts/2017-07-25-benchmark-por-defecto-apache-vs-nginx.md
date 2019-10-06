@@ -17,13 +17,13 @@ Una vez dicho lo anterior, la pregunta a resolver el día de hoy es:
 
 **Con sus configuraciones por defecto, ¿Cuál servidor web tendrá mejor rendimiento Apache o Nginx?**
 
-<img class="wp-image-219 size-thumbnail aligncenter" src="https://www.oscarhenriquezg.net/images/2017/07/apache_vs_nginx-150x150.png" width="150" height="150" /> 
+![alt text](https://www.oscarhenriquezg.net/images/2017/07/apache_vs_nginx-150x150.png "V/S")
 
 Hoy he querido probar [Apache](http://httpd.apache.org/) y [Nginx](https://nginx.org/en/) en sus instalaciones por defecto en un ambiente Debian Linux. Me ha tocado trabajar con ambos Web Servers y la verdad a ambos los he encontrado bastante sólidos y confiables, pero hoy tenemos una pregunta y vamos a ver cómo responderla 😀
 
-<!--more-->Características del Ambiente de Pruebas:
+Características del Ambiente de Pruebas:
 
-### **Hardware**
+**Hardware**
 
 En cuanto a hardware vamos a utilizar VPS del proveedor Digital Ocean, ya que son las que tenía a mano y me permiten tener 2 servidores de exactamente las mismas características para hacer la contienda lo más justa posible.
 
@@ -33,35 +33,27 @@ En cuanto a hardware vamos a utilizar VPS del proveedor Digital Ocean, ya que so
 **Disco:** 20 GB Solid State  
 **Procesador:** Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz, 1 core.
 
-<span style="text-decoration: underline;">Nombres de servidores:</span>
+#### Nombres de servidores:
 
-<p class="p1">
-  <strong>Server1:</strong> debian-512mb-ny-01-<strong><em>apache</em></strong><br /> <strong>IP:</strong> 67.205.147.162<br /> <strong>Ubicación:</strong> New York City, site 1, DigitalOcean
-</p>
+**Server1:** debian-512mb-ny-01-**apache**   
+**IP:** 67.205.147.162
+**Ubicación:** New York City, site 1, DigitalOcean
 
-<p class="p1">
-  <strong>Server2:</strong> debian-512mb-ny-01-<strong><em>nginx</em></strong><br /> <strong>IP:</strong> 198.211.116.62<br /> <strong>Ubicación:</strong> New York City, site 1, DigitalOcean
-</p>
+**Server2:** debian-512mb-ny-01-**nginx**  
+**IP:** 198.211.116.62  
+**Ubicación:** New York City, site 1, DigitalOcean  
 
-<div id='gallery-1' class='gallery galleryid-52 gallery-columns-1 gallery-size-medium'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/do-droplets/'><img width="300" height="170" src="https://www.oscarhenriquezg.net/images/2017/03/DO-Droplets-300x170.png" class="attachment-medium size-medium" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/DO-Droplets-300x170.png 300w, https://www.oscarhenriquezg.net/images/2017/03/DO-Droplets-768x436.png 768w, https://www.oscarhenriquezg.net/images/2017/03/DO-Droplets-700x398.png 700w, https://www.oscarhenriquezg.net/images/2017/03/DO-Droplets.png 998w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  </div></figure>
-</div>
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/DO-Droplets-300x170.png "Droplets")   
+[[See]](www.oscarhenriquezg.net/images/2017/03/DO-Droplets-768x436.png)
+
 
 #### Sistema Operativo
 
 Como sistema operativo he elegido Debian Linux en su versión 8.7 (Jessie) de 64 bits, que es la última versión estable del sistema operativo a la fecha (19 de marzo de 2017).
 
-<div id='gallery-2' class='gallery galleryid-52 gallery-columns-1 gallery-size-large'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://163.250.212.113/index.php/2017/07/25/benchmark-por-defecto-apache-vs-nginx/os-ips-servers/'><img width="720" height="167" src="https://www.oscarhenriquezg.net/images/2017/03/OS-IPs-servers-1024x238.png" class="attachment-large size-large" alt="" srcset="https://www.oscarhenriquezg.net/images/2017/03/OS-IPs-servers-1024x238.png 1024w, https://www.oscarhenriquezg.net/images/2017/03/OS-IPs-servers-300x70.png 300w, https://www.oscarhenriquezg.net/images/2017/03/OS-IPs-servers-768x179.png 768w, https://www.oscarhenriquezg.net/images/2017/03/OS-IPs-servers-700x163.png 700w, https://www.oscarhenriquezg.net/images/2017/03/OS-IPs-servers.png 1306w" sizes="(max-width: 720px) 100vw, 720px" /></a>
-  </div></figure>
-</div>
+![alt text](https://www.oscarhenriquezg.net/images/2017/03/OS-IPs-servers-700x163.png "S.O.")   
+[[See]](https://www.oscarhenriquezg.net/images/2017/03/OS-IPs-servers-1024x238.png)
+
 
 Una vez iniciado el servidor virtual le damos su respectivo apt-get update para que todos sus repositorios estén frescos y con las últimas versiones del software disponible para el sistema.
 
@@ -71,13 +63,17 @@ Respecto a la instalación de los servidores web lo haremos de la manera más se
 
 Para Apache usaremos:
 
-`#apt-get install apache2`
+```sh
+#apt-get install apache2
+```
 
 Con el comando anterior se nos instala Apache en su versión 2.4.10
 
 Para Nginx usaremos:
 
-`#apt-get install nginx`
+```sh
+#apt-get install nginx
+```
 
 Con el comando anterior se nos instala Nginx en su versión 1.6.2
 
@@ -237,7 +233,7 @@ Apache responde todas sus solicitudes sin errores en un tiempo promedio de respu
   </div></figure>
 </div>
 
-Nginx pudo recibir más &#8220;golpes&#8221; y responderlos todos sin errores y en un menor tiempo de respuesta promedio.
+Nginx pudo recibir más "golpes" y responderlos todos sin errores y en un menor tiempo de respuesta promedio.
 
 ### Mi Veredicto
 
