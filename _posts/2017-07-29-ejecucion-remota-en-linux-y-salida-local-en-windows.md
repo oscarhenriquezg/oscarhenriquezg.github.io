@@ -17,7 +17,7 @@ categories:
 
 Ojo que no solamente vamos a "ver" la salida en un emulador de terminal, como Putty u otro, en local, sino que buscaremos que la salida sea escrita en un archivo local.
 
-<img class="size-medium wp-image-211 aligncenter" src="https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands-300x151.png" alt="" width="300" height="151" srcset="https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands-300x151.png 300w, https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands.png 592w" sizes="(max-width: 300px) 100vw, 300px" /> 
+<img class="size-medium wp-image-211 aligncenter" src="https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands-300x151.png" alt="" width="300" height="151" srcset="https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands-300x151.png 300w, https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands.png 592w" sizes="(max-width: 300px) 100vw, 300px" />  
 
 En una ocasión me vi enfrentado a la siguiente problemática, debía realizar el análisis en tiempo real de un log de una aplicación que estaba escribiendo constantemente (500kb x minuto aprox.) Todo bien hasta aquí, el problema es lo siguiente:
 
