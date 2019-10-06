@@ -16,7 +16,7 @@ La dejaré por aquí:
 
 ![alt text](https://www.oscarhenriquezg.net/images/2017/10/filesystem-Hierarchy-1024x640.png "Unix ")
 
-[[See]](https://www.oscarhenriquezg.net/images/2017/10/filesystem-Hierarchy-1024x640.png)
+[[See]](https://www.oscarhenriquezg.net/images/2017/10/filesystem-Hierarchy-full.png)
 
 
 
