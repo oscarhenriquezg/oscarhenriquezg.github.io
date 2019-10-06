@@ -17,7 +17,9 @@ categories:
 
 Ojo que no solamente vamos a "ver" la salida en un emulador de terminal, como Putty u otro, en local, sino que buscaremos que la salida sea escrita en un archivo local.
 
-<img class="size-medium wp-image-211 aligncenter" src="https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands-300x151.png" alt="" width="300" height="151" srcset="https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands-300x151.png 300w, https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands.png 592w" sizes="(max-width: 300px) 100vw, 300px" />  
+
+![alt text](https://www.oscarhenriquezg.net/images/2017/07/lin-to-win-commands.png "diagrama simple")
+
 
 En una ocasión me vi enfrentado a la siguiente problemática, debía realizar el análisis en tiempo real de un log de una aplicación que estaba escribiendo constantemente (500kb x minuto aprox.) Todo bien hasta aquí, el problema es lo siguiente:
 
@@ -51,7 +53,7 @@ plink.exe root@miserver -pw S3cr3tp4ss "tail -f ArchivoRemoto.log" >> Archivoloc
 De este modo escribo la salida del tail -f del *ArchivoRemoto.log* al *Archivolocal.log* en mi sistema de archivos local, luego este archivo local lo puedo tratar con herramientas de análisis de logs como Kibana.
 
 
-Hubiera sido muy distinto si fuera entre sistemas linux o si pudiera instalar herramientas en el servidor remoto o mejor aún contar con un servidor de syslog desde donde <em>stremearme</em> el archivo para consumirlo, pero tenía las limitaciones que comentaba al principio del post y bueno hay que saber jugar en cualquier cancha como dicen por ahí.
+Hubiera sido muy distinto si fuera entre sistemas linux o si pudiera instalar herramientas en el servidor remoto o mejor aún contar con un servidor de syslog desde donde _stremearme_ el archivo para consumirlo, pero tenía las limitaciones que comentaba al principio del post y bueno hay que saber jugar en cualquier cancha como dicen por ahí.
 
 De todas maneras si alguien conoce otra forma de resolverlo o alguna herramienta que lo permita, por favor comenten para ver si se puede mejorar esta solución básica que he encontrado.
 

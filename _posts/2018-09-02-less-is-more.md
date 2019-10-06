@@ -15,11 +15,28 @@ categories:
 ---
 Sí, less is more, como lo dijo antaño [Ludwig Mies van der Rohe](https://es.wikipedia.org/wiki/Ludwig_Mies_van_der_Rohe)   padre de la arquitectura y del diseño minimalista, bueno en este caso y en el contexto de linux diremos que “less is more than more“.   
 
-Así es, este a veces olvidado comando nos entrega más y mejores posibilidades que el tradicional more, en los siguientes aspectos:   
+Así es, este a veces olvidado comando nos entrega más y mejores posibilidades que el tradicional more, en los siguientes aspectos:            
+           
+
+
+
+
+
+
+
 
 {% if post.excerpt != post.content %}
     <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
-{% endif %}   
+{% endif %}
+
+
+
+
+
+
+
+
+
 
 
 **Búsquedas**: Nos ayuda con el resaltado del texto a buscar.
