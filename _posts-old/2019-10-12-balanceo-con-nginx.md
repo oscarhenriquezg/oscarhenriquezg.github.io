@@ -11,7 +11,11 @@ swp_cache_timestamp:
 categories:
   - Software
 ---
-Hace tiempo me vi en el caso de querer ingresar a un router que habían configurado hace mucho tiempo y no recordaban sus credenciales, pero si recordaban que era algo fácil como una serie de números o letras, algo así me dieron como pista :-/
+Desde que probe nginx en entornos productivos me gusto su performance y su sencilla configuración, lo he usado como servidor web, proxy y balanceador y en estas 3 facetas siempre me ha funcionado de lujo.
+
+Hoy voy a revisar una configuracion basica de balanceo que puede ser muy util para "frontear" alguna web o servicio  que este recibiendo una alta demanda.
+
+
 
 Probe con los datos por defecto admin/<blank> y nada, 1234, qwerty, etc. y nada, pense en resetear de fabrica, pero no podia afectar a los usuarios de la red en ese momento y como ya sabía que la password era débil, entonces no me quedaba más que ponerme bruto 😀
 
