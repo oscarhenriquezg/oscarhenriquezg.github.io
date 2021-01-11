@@ -19,7 +19,7 @@ Cine.
 
 Trabajo como ingeniero devops o SRE (más correctamente hablando)
 
-Para contacto por temas profesionales: [Linkedin](http://https://www.linkedin.com/in/oscarhenriquez/)
+Para contacto por temas profesionales: [Linkedin](https://www.linkedin.com/in/oscarhenriquez/)
 
 para cualquier otro tema puedes escribirme por acá:
 
