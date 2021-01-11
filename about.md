@@ -8,20 +8,12 @@ permalink: /about/
 
 Hola, mi nombre es **Oscar Henríquez**, me interesan cosas como:
 
-Nuevas tecnologias.
-Infraestructura tecnológica.
-Seguridad de la información.
-Automatización.
-Arte.
-Música.
-Filosofía.
-Cine.
+Nuevas tecnologias, Infraestructura tecnológica, Seguridad de la información, Automatización, Arte, Música, Filosofía, Cine.
 
-Trabajo como ingeniero devops o SRE (más correctamente hablando)
-
+Los ultimos años he trabajado principalmente en temas de tecnologías, seguridad y automatización.
 Para contacto por temas profesionales: [Linkedin](https://www.linkedin.com/in/oscarhenriquez/)
 
-para cualquier otro tema puedes escribirme por acá:
+Para cualquier otro tema puedes escribirme por acá:
 
 [contacto <span style="color: #999999;"><em>at</em> </span>oscarhenriquezg <span style="color: #999999;"><em>dot</em> </span>net](mailto:%63%6Fnta%63t%6F@os%63a%72h%65%6Eri%71uezg.n%65t)
 
